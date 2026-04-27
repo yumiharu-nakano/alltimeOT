@@ -125,8 +125,20 @@ the derivation.
 
 ## Citation
 
-If you use this code, please cite the accompanying paper (see
-`alltime_ot.bib`).
+If you use this code, please cite the accompanying paper:
+
+```bibtex
+@article{Nakano2026alltimeot,
+  author  = {Nakano, Yumiharu},
+  title   = {All-time optimal transport: a mesh-free kernel method},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026},
+}
+```
+
+The arXiv identifier `XXXX.XXXXX` will be filled in once arXiv
+processing completes; the BibTeX entry on the arXiv abstract page
+should be used as the authoritative reference.
 
 ## License
 

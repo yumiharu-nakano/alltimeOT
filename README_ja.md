@@ -54,12 +54,15 @@ experiments/             各実験スクリプト
     appA_sensitivity.py      付録 A: (M, N, λ) 感度解析
     appB_dim_scaling.py      付録 B: 次元スケーリング (d=1…10)
 
-alltime_ot.tex / .bib    論文原稿
 requirements.txt
 pyproject.toml
 .gitignore
+LICENSE
 README.md / README_ja.md
 ```
+
+論文本体（LaTeX ソース・PDF）は arXiv で公開しており、本リポジトリには
+含めていません（arXiv が single source of truth）。
 
 
 ## 各実験の概要
@@ -125,6 +128,25 @@ python experiments/exp2_flow_matching.py   # 数秒
 
 `exp2_mmot_learned_affine.py` や `exp4_baselines.py` はハイパー
 パラメータのスイープを含むため分単位の時間がかかります。
+
+---
+
+## 引用
+
+本コードを利用される場合、付随する論文を引用してください：
+
+```bibtex
+@article{Nakano2026alltimeot,
+  author  = {Nakano, Yumiharu},
+  title   = {All-time optimal transport: a mesh-free kernel method},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026},
+}
+```
+
+arXiv 識別子 `XXXX.XXXXX` は arXiv 処理完了後に確定します。
+最終的には arXiv の abstract ページに表示される BibTeX を
+authoritative な参照として用いてください。
 
 ---
 
