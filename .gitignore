@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Generated experimental outputs (intermediate data, predictions, weights)
+# Figures and small metric JSONs under output/ are tracked; large data are not.
+output/**/*.npz
+output/**/eb_pca.npz
+output_exp*/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz

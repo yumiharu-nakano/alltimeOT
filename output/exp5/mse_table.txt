@@ -1,0 +1,4 @@
+zero   2.54778
+affine  total=2.18223  u1=2.12561  u2=0.05662  mean_SW2=0.12174  mean_MMD=0.05223
+bilin   total=8.91285  u1=8.02079  u2=0.89206  mean_SW2=0.16220  mean_MMD=0.08690
+tanh    total=7.11201  u1=5.19160  u2=1.92040  mean_SW2=0.12142  mean_MMD=0.05002
