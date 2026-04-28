@@ -2,7 +2,7 @@
 
 > Reference code for the paper *All-time optimal transport: a mesh-free
 > kernel method* (Y. Nakano, 2026).
-> arXiv: [arXiv:2604.24226](https://arxiv.org/abs/2604.24226) (preprint
+> [arXiv:2604.24226](https://arxiv.org/abs/2604.24226) (preprint
 > identifier to be filled in once arXiv processing completes).
 
 A reference implementation of the **All-time OT** estimator: given samples
@@ -136,9 +136,6 @@ If you use this code, please cite the accompanying paper:
 }
 ```
 
-The arXiv identifier `2604.24226` will be filled in once arXiv
-processing completes; the BibTeX entry on the arXiv abstract page
-should be used as the authoritative reference.
 
 ## License
 

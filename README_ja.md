@@ -1,8 +1,7 @@
 # All-time 最適輸送 — 日本語解説
 
 > 論文 *All-time optimal transport: a mesh-free kernel method*（Y. Nakano, 2026）の参照実装。
-> arXiv: [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
-> （arXiv 識別子は処理完了後に書き換え予定）。
+> [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
 
 このリポジトリは論文 *All-time Optimal Transport* で提案している
 **全時間 OT ドリフト推定器** の参照実装です。時間添字付きの確率分布族
@@ -144,9 +143,6 @@ python experiments/exp2_flow_matching.py   # 数秒
 }
 ```
 
-arXiv 識別子 `2604.24226` は arXiv 処理完了後に確定します。
-最終的には arXiv の abstract ページに表示される BibTeX を
-authoritative な参照として用いてください。
 
 ---
 
