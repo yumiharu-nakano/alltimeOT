@@ -2,7 +2,7 @@
 
 > Reference code for the paper *All-time optimal transport: a mesh-free
 > kernel method* (Y. Nakano, 2026).
-> [arXiv:2604.24226](https://arxiv.org/abs/2604.24226) (preprint
+> [arXiv:2604.24226](https://arxiv.org/abs/2604.24226) 
 
 A reference implementation of the **All-time OT** estimator: given samples
 from every marginal of a time-indexed family of probability measures
