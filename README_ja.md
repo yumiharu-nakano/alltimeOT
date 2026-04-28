@@ -1,7 +1,7 @@
 # All-time 最適輸送 — 日本語解説
 
 > 論文 *All-time optimal transport: a mesh-free kernel method*（Y. Nakano, 2026）の参照実装。
-> arXiv: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
+> arXiv: [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
 > （arXiv 識別子は処理完了後に書き換え予定）。
 
 このリポジトリは論文 *All-time Optimal Transport* で提案している
@@ -139,12 +139,12 @@ python experiments/exp2_flow_matching.py   # 数秒
 @article{Nakano2026alltimeot,
   author  = {Nakano, Yumiharu},
   title   = {All-time optimal transport: a mesh-free kernel method},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2604.24226},
   year    = {2026},
 }
 ```
 
-arXiv 識別子 `XXXX.XXXXX` は arXiv 処理完了後に確定します。
+arXiv 識別子 `2604.24226` は arXiv 処理完了後に確定します。
 最終的には arXiv の abstract ページに表示される BibTeX を
 authoritative な参照として用いてください。
 
