@@ -1,6 +1,6 @@
 # All-time 最適輸送 — 日本語解説
 
-> 論文 *All-time optimal transport: a mesh-free kernel method*（Y. Nakano, 2026）の参照実装。
+> 論文 *Continuum-marginal optimal transport: a mesh-free kernel method*（Y. Nakano, 2026）の参照実装。
 > [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
 
 このリポジトリは論文 *All-time Optimal Transport* で提案している
