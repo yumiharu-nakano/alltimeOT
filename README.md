@@ -129,7 +129,7 @@ If you use this code, please cite the accompanying paper:
 ```bibtex
 @article{Nakano2026alltimeot,
   author  = {Nakano, Yumiharu},
-  title   = {All-time optimal transport: a mesh-free kernel method},
+  title   = {Continuum-marginal optimal transport: a mesh-free kernel method},
   journal = {arXiv preprint arXiv:2604.24226},
   year    = {2026},
 }
