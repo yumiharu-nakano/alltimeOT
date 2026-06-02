@@ -1,0 +1,15 @@
+{
+  "method": "all-time MLP (interpolation setup)",
+  "n_params": 15294,
+  "iters": 8000,
+  "h": 8.0,
+  "lam": 10000.0,
+  "M": 4,
+  "N": 80,
+  "K_ens": 25,
+  "pred_day_start": 9.0,
+  "pred_t_start": 0.25,
+  "pred_t_end": 0.5,
+  "training_time_s": 197.3319067955017,
+  "final_loss": -2474.2956005302854
+}

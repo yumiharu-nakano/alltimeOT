@@ -41,14 +41,15 @@ experiments/             Reproduction scripts for every paper figure
     exp3_baselines.py        Exp 3: Bimodal MMOT and WOT baselines
     exp4_2d_translation.py   Exp 4: 2-d Gaussian translation
     exp5_2d_bifurcation.py   Exp 5: 2-d bifurcation / bimodal merging
-    exp_stochastic_1d_train.py    §4.6: 1-d Nelson stochastic case (affine training)
-    exp_stochastic_1d_metrics.py  §4.6: 1-d Nelson W2/MMD metrics (loads weights.json)
-    exp6_eb_preprocess.py         §4.7: Embryoid body scRNA-seq preprocessing
-    exp6_eb_alltime.py            §4.7: All-time MLP drift on EB data
-    exp6_eb_baselines.py          §4.7: Waddington-OT and zero-drift baselines
-    exp6_eb_evaluate.py           §4.7: Evaluation on held-out day 15
+    exp6_eb_preprocess.py            §4.6: Embryoid body scRNA-seq preprocessing
+    exp6_eb_alltime_interp.py        §4.6: All-time MLP drift on EB data (interpolation setup)
+    exp6_eb_baselines_interp.py      §4.6: Waddington-OT and zero-drift baselines
+    exp6_eb_evaluate_interp.py       §4.6: SW2 and MMD evaluation on held-out day 15
+    exp6_eb_bootstrap_stability.py   §4.6: Bootstrap stability diagnostic of the inferred velocity
+    exp_stochastic_1d_train.py    §4.7: 1-d Nelson stochastic case (affine training)
+    exp_stochastic_1d_metrics.py  §4.7: 1-d Nelson W2/MMD metrics (loads weights.json)
     appA_sensitivity.py      App A: Sensitivity sweep over (M, N, λ)
-    appB_dim_scaling.py      App B: Dimension scaling (d = 1 … 10)
+    appB_dim_scaling.py      App B: Dimension scaling (d = 1 ... 10)
 ```
 
 ## Installation

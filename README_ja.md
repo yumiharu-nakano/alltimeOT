@@ -44,12 +44,13 @@ experiments/             各実験スクリプト
     exp3_baselines.py        Exp 3: 双峰問題での DLA/WOT 比較
     exp4_2d_translation.py   Exp 4: 2 次元 Gauss 並進
     exp5_2d_bifurcation.py   Exp 5: 2 次元 分岐問題
-    exp_stochastic_1d_train.py    §4.6: 1 次元 Nelson 問題（アフィンドリフト学習）
-    exp_stochastic_1d_metrics.py  §4.6: 1 次元 Nelson 問題のメトリクス（weights.json 読込）
-    exp6_eb_preprocess.py         §4.7: 単細胞 RNA-seq (EB) データ前処理
-    exp6_eb_alltime.py            §4.7: All-time MLP ドリフト学習
-    exp6_eb_baselines.py          §4.7: Waddington-OT・zero drift ベースライン
-    exp6_eb_evaluate.py           §4.7: 隠した day 15 での評価
+    exp6_eb_preprocess.py            §4.6: 単細胞 RNA-seq (EB) データ前処理
+    exp6_eb_alltime_interp.py        §4.6: All-time MLP ドリフト学習（補間設定）
+    exp6_eb_baselines_interp.py      §4.6: Waddington-OT・zero drift ベースライン
+    exp6_eb_evaluate_interp.py       §4.6: held-out day 15 で SW2 と MMD 評価
+    exp6_eb_bootstrap_stability.py   §4.6: 推定速度場のブートストラップ安定性診断
+    exp_stochastic_1d_train.py    §4.7: 1 次元 Nelson 問題（アフィンドリフト学習）
+    exp_stochastic_1d_metrics.py  §4.7: 1 次元 Nelson 問題のメトリクス（weights.json 読込）
     appA_sensitivity.py      付録 A: (M, N, λ) 感度解析
     appB_dim_scaling.py      付録 B: 次元スケーリング (d=1…10)
 
@@ -78,8 +79,9 @@ README.md / README_ja.md
 | `exp3_baselines.py` | 同上 | DLA / WOT ベースライン |
 | `exp4_2d_translation.py` | 2 次元 Gauss 並進 | `u*=(2, 0.5)` |
 | `exp5_2d_bifurcation.py` | 2 次元 双峰 × 標準正規 | `u*₁=-2 tanh(...), u*₂=0` |
-| `exp_stochastic_1d_train.py` / `exp_stochastic_1d_metrics.py` | 1 次元 Nelson 問題 `σ=1` | 確率ドリフト `u*=-x/2+1.5+t`（§4.6: 学習 → W₂/MMD 評価） |
-| `exp6_eb_*.py` (preprocess / alltime / baselines / evaluate) | EB scRNA-seq, $d=30$ | §4.7: 実データでの軌跡推定（held-out day 15、All-time vs WOT vs zero） |
+| `exp6_eb_*_interp.py` (preprocess / alltime / baselines / evaluate) | EB scRNA-seq, $d=30$ | §4.6: 実データでの軌跡推定、補間設定（held-out day 15、All-time vs WOT vs zero） |
+| `exp6_eb_bootstrap_stability.py` | EB scRNA-seq, $d=30$ | §4.6: ブートストラップによる速度場の安定性診断（All-time vs WOT） |
+| `exp_stochastic_1d_train.py` / `exp_stochastic_1d_metrics.py` | 1 次元 Nelson 問題 `σ=1` | 確率ドリフト `u*=-x/2+1.5+t`（§4.7: 学習 → W₂/MMD 評価） |
 | `appA_sensitivity.py` | Exp 1 を基に `(M, N, λ)` 感度解析 | — |
 | `appB_dim_scaling.py` | `d = 1…10` Gauss 並進 | 次元スケーリング |
 

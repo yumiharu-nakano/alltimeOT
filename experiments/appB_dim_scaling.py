@@ -39,7 +39,7 @@ def u_star_d(d: int) -> np.ndarray:
 LAM = 1000.0
 M, N, N0 = 25, 20, 50
 K_ENS = 5
-K_SEED = 3
+K_SEED = 10
 H = 1.0
 
 OUT = os.environ.get("ALLTIME_OT_OUT", "output/appB")
@@ -109,15 +109,22 @@ def main() -> None:
             werrs.append(w_err)
             print(f"  seed {s}: MSE={mse:.5f}, time={tt:.1f}s, "
                   f"nit={nit}, |W-W*|={w_err:.4f}")
+        mses_arr = np.asarray(mses, dtype=float)
         results[d] = {
-            "mse_mean": float(np.mean(mses)),
-            "mse_std": float(np.std(mses)),
+            "mse_mean": float(np.mean(mses_arr)),
+            "mse_std": float(np.std(mses_arr)),
+            "mse_median": float(np.median(mses_arr)),
+            "mse_q25": float(np.quantile(mses_arr, 0.25)),
+            "mse_q75": float(np.quantile(mses_arr, 0.75)),
+            "mse_per_seed": [float(m) for m in mses_arr],
             "time_mean": float(np.mean(times)),
             "werr_mean": float(np.mean(werrs)),
             "n_params": d * (d + 2),
+            "K_seed": K_SEED,
         }
         print(f"  -- mean MSE = {results[d]['mse_mean']:.5f} "
               f"+/- {results[d]['mse_std']:.5f}, "
+              f"median = {results[d]['mse_median']:.5f}, "
               f"mean time = {results[d]['time_mean']:.1f}s")
 
     with open(f"{OUT}/scaling.json", "w") as f:

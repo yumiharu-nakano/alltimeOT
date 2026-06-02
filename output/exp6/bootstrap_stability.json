@@ -1,0 +1,21 @@
+{
+  "K_BOOT": 5,
+  "BOOT_FRAC": 0.8,
+  "N_QUERY": 1000,
+  "alltime": {
+    "per_query_std_mean": 5.556781660325079,
+    "per_query_std_median": 5.370948146897273,
+    "per_query_std_q25": 4.624250644737498,
+    "per_query_std_q75": 6.280515656016943,
+    "mean_norm_u": 17.277153901416856
+  },
+  "wot": {
+    "per_query_std_mean": 10.526023018208159,
+    "per_query_std_median": 8.752643967606971,
+    "per_query_std_q25": 5.2364695470958456,
+    "per_query_std_q75": 13.4100659117451,
+    "mean_norm_u": 30.298132597577432
+  },
+  "wot_over_alltime_ratio_mean": 1.8942660809156884,
+  "wot_over_alltime_ratio_median": 1.6296273447851586
+}
