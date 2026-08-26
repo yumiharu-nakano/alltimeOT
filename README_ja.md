@@ -42,6 +42,7 @@ experiments/             各実験スクリプト
     exp2_wot_comparison.py   Exp 2: Waddington-OT 比較
     exp3_bimodal.py          Exp 3: 1 次元 双峰融合フロー（bilinear / tanh辞書 / MLP 比較）
     exp3_baselines.py        Exp 3: 双峰問題での DLA/WOT 比較
+    exp3_wot_smoothing.py    Exp 3: 平滑化した Waddington-OT ドリフトと真値の比較
     exp4_2d_translation.py   Exp 4: 2 次元 Gauss 並進
     exp5_2d_bifurcation.py   Exp 5: 2 次元 分岐問題
     exp6_eb_preprocess.py            §4.6: 単細胞 RNA-seq (EB) データ前処理
@@ -49,6 +50,8 @@ experiments/             各実験スクリプト
     exp6_eb_baselines_interp.py      §4.6: Waddington-OT・zero drift ベースライン
     exp6_eb_evaluate_interp.py       §4.6: held-out day 15 で SW2 と MMD 評価
     exp6_eb_bootstrap_stability.py   §4.6: 推定速度場のブートストラップ安定性診断
+    exp6_eb_bootstrap_v2.py          §4.6: 20 回再標本化・相対標準偏差・平滑化 WOT による安定性
+    exp6_eb_smoothed_accuracy.py     §4.6: 平滑化 WOT の held-out 精度と安定性の帯域幅依存
     exp_stochastic_1d_train.py    §4.7: 1 次元 Nelson 問題（アフィンドリフト学習）
     exp_stochastic_1d_metrics.py  §4.7: 1 次元 Nelson 問題のメトリクス（weights.json 読込）
     appA_sensitivity.py      付録 A: (M, N, λ) 感度解析
@@ -77,10 +80,13 @@ README.md / README_ja.md
 | `exp2_wot_comparison.py` | 同上 | Waddington-OT ベースライン |
 | `exp3_bimodal.py` | 双峰 → 合流 | `u*=-2 tanh(2(1-t)x)`（bilinear / tanh 辞書 / MLP を同一損失で比較） |
 | `exp3_baselines.py` | 同上 | DLA / WOT ベースライン |
+| `exp3_wot_smoothing.py` | 同上 | 平滑化した WOT ドリフトを真値と比較（精度と安定性） |
 | `exp4_2d_translation.py` | 2 次元 Gauss 並進 | `u*=(2, 0.5)` |
 | `exp5_2d_bifurcation.py` | 2 次元 双峰 × 標準正規 | `u*₁=-2 tanh(...), u*₂=0` |
 | `exp6_eb_*_interp.py` (preprocess / alltime / baselines / evaluate) | EB scRNA-seq, $d=30$ | §4.6: 実データでの軌跡推定、補間設定（held-out day 15、All-time vs WOT vs zero） |
 | `exp6_eb_bootstrap_stability.py` | EB scRNA-seq, $d=30$ | §4.6: ブートストラップによる速度場の安定性診断（All-time vs WOT） |
+| `exp6_eb_bootstrap_v2.py` | 同上 | §4.6: K=20、スケール不変な相対標準偏差、平滑化 WOT を加えた再評価 |
+| `exp6_eb_smoothed_accuracy.py` | 同上 | §4.6: 平滑化 WOT の帯域幅を掃引し held-out 精度と安定性を同時に測定 |
 | `exp_stochastic_1d_train.py` / `exp_stochastic_1d_metrics.py` | 1 次元 Nelson 問題 `σ=1` | 確率ドリフト `u*=-x/2+1.5+t`（§4.7: 学習 → W₂/MMD 評価） |
 | `appA_sensitivity.py` | Exp 1 を基に `(M, N, λ)` 感度解析 | — |
 | `appB_dim_scaling.py` | `d = 1…10` Gauss 並進 | 次元スケーリング |

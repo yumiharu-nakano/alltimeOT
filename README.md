@@ -39,6 +39,7 @@ experiments/             Reproduction scripts for every paper figure
     exp2_wot_comparison.py   Exp 2: Waddington-OT comparison
     exp3_bimodal.py          Exp 3: 1-d bimodal merging flow (bilinear, tanh dict, MLP)
     exp3_baselines.py        Exp 3: Bimodal MMOT and WOT baselines
+    exp3_wot_smoothing.py    Exp 3: Smoothed Waddington-OT drift against the true drift
     exp4_2d_translation.py   Exp 4: 2-d Gaussian translation
     exp5_2d_bifurcation.py   Exp 5: 2-d bifurcation / bimodal merging
     exp6_eb_preprocess.py            §4.6: Embryoid body scRNA-seq preprocessing
@@ -46,6 +47,8 @@ experiments/             Reproduction scripts for every paper figure
     exp6_eb_baselines_interp.py      §4.6: Waddington-OT and zero-drift baselines
     exp6_eb_evaluate_interp.py       §4.6: SW2 and MMD evaluation on held-out day 15
     exp6_eb_bootstrap_stability.py   §4.6: Bootstrap stability diagnostic of the inferred velocity
+    exp6_eb_bootstrap_v2.py          §4.6: Stability with 20 resamples, relative sd, smoothed WOT
+    exp6_eb_smoothed_accuracy.py     §4.6: Held-out accuracy and stability of smoothed WOT by bandwidth
     exp_stochastic_1d_train.py    §4.7: 1-d Nelson stochastic case (affine training)
     exp_stochastic_1d_metrics.py  §4.7: 1-d Nelson W2/MMD metrics (loads weights.json)
     appA_sensitivity.py      App A: Sensitivity sweep over (M, N, λ)
