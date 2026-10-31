@@ -1,9 +1,9 @@
 # All-time 最適輸送 — 日本語解説
 
-> 論文 *Continuum-marginal optimal transport: a mesh-free kernel method*（Y. Nakano, 2026）の参照実装。
-> [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
+> 論文 *Continuum-marginal optimal transport: a mesh-free kernel method*（Y. Nakano, *Transactions on Machine Learning Research*, 2026）の参照実装。
+> [OpenReview](https://openreview.net/forum?id=1bzgCxWYpr) · [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
 
-このリポジトリは論文 *All-time Optimal Transport* で提案している
+このリポジトリは上記論文で提案している
 **全時間 OT ドリフト推定器** の参照実装です。時間添字付きの確率分布族
 `{μ_t}_{t∈[0,T]}` の「各時刻のサンプル」だけを入力として、
 連続の式
@@ -54,8 +54,8 @@ experiments/             各実験スクリプト
     exp6_eb_smoothed_accuracy.py     §4.6: 平滑化 WOT の held-out 精度と安定性の帯域幅依存
     exp_stochastic_1d_train.py    §4.7: 1 次元 Nelson 問題（アフィンドリフト学習）
     exp_stochastic_1d_metrics.py  §4.7: 1 次元 Nelson 問題のメトリクス（weights.json 読込）
-    appA_sensitivity.py      付録 A: (M, N, λ) 感度解析
-    appB_dim_scaling.py      付録 B: 次元スケーリング (d=1…10)
+    appA_sensitivity.py      付録 C: (M, N, λ) 感度解析
+    appB_dim_scaling.py      付録 D: 次元スケーリング (d=1…10)
 
 requirements.txt
 pyproject.toml
@@ -64,8 +64,8 @@ LICENSE
 README.md / README_ja.md
 ```
 
-論文本体（LaTeX ソース・PDF）は arXiv で公開しており、本リポジトリには
-含めていません（arXiv が single source of truth）。
+論文本体は TMLR（OpenReview）と arXiv で公開しており、本リポジトリには
+含めていません。
 
 
 ## 各実験の概要
@@ -143,11 +143,13 @@ python experiments/exp2_flow_matching.py   # 数秒
 本コードを利用される場合、付随する論文を引用してください：
 
 ```bibtex
-@article{Nakano2026alltimeot,
-  author  = {Nakano, Yumiharu},
+@article{nakano2026continuummarginal,
   title   = {Continuum-marginal optimal transport: a mesh-free kernel method},
-  journal = {arXiv preprint arXiv:2604.24226},
+  author  = {Yumiharu Nakano},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
   year    = {2026},
+  url     = {https://openreview.net/forum?id=1bzgCxWYpr}
 }
 ```
 

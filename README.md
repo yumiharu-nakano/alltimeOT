@@ -1,7 +1,9 @@
 # All-time Optimal Transport
 
 > Reference code for the paper *Continuum-marginal optimal transport: a mesh-free
-> kernel method* (Y. Nakano, 2026).
+> kernel method* by Y. Nakano, published in *Transactions on Machine Learning
+> Research* (2026).
+> [OpenReview](https://openreview.net/forum?id=1bzgCxWYpr) ·
 > [arXiv:2604.24226](https://arxiv.org/abs/2604.24226)
 
 A reference implementation of the **All-time OT** estimator: given samples
@@ -51,15 +53,15 @@ experiments/             Reproduction scripts for every paper figure
     exp6_eb_smoothed_accuracy.py     §4.6: Held-out accuracy and stability of smoothed WOT by bandwidth
     exp_stochastic_1d_train.py    §4.7: 1-d Nelson stochastic case (affine training)
     exp_stochastic_1d_metrics.py  §4.7: 1-d Nelson W2/MMD metrics (loads weights.json)
-    appA_sensitivity.py      App A: Sensitivity sweep over (M, N, λ)
-    appB_dim_scaling.py      App B: Dimension scaling (d = 1 ... 10)
+    appA_sensitivity.py      App C: Sensitivity sweep over (M, N, λ)
+    appB_dim_scaling.py      App D: Dimension scaling (d = 1 ... 10)
 ```
 
 ## Installation
 
 ```bash
-git clone https://github.com/<you>/alltime_ot.git
-cd alltime_ot
+git clone https://github.com/yumiharu-nakano/alltimeOT.git
+cd alltimeOT
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```
@@ -131,11 +133,13 @@ the derivation.
 If you use this code, please cite the accompanying paper:
 
 ```bibtex
-@article{Nakano2026alltimeot,
-  author  = {Nakano, Yumiharu},
+@article{nakano2026continuummarginal,
   title   = {Continuum-marginal optimal transport: a mesh-free kernel method},
-  journal = {arXiv preprint arXiv:2604.24226},
+  author  = {Yumiharu Nakano},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
   year    = {2026},
+  url     = {https://openreview.net/forum?id=1bzgCxWYpr}
 }
 ```
 
